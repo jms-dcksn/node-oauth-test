@@ -5,8 +5,8 @@ const open = require('open');
 const app = express()
 const port = process.env.PORT || 8080
 
-const CLIENT_ID = "apu9ebj084c1nxbhmuy";
-const CLIENT_SECRET = "9kzr66gepl0is1za29p";
+const CLIENT_ID = "<>";
+const CLIENT_SECRET = "<>";
 const tokenURL= `https://api.smartsheet.com/2.0/token?grant_type=authorization_code&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=`
 const codeURL = 'https://app.smartsheet.com/b/authorize?response_type=code&client_id=' + CLIENT_ID + '&scope=READ_SHEETS%20WRITE_SHEETS'
 
