@@ -8,8 +8,8 @@ const port = process.env.PORT || 8080
 
 const publicDirectory = path.join(__dirname, '../public')
 
-const CLIENT_ID = "OLqCA3fN3St8i1FNGBCB9yzbO4l5JZkp";
-const CLIENT_SECRET = "HuPZd-KTzmMRfMHh6YA-Ioi99_DeXec2TYjBdtJU_629oVF4ZP-pdJBvoJltbJvU";
+const CLIENT_ID = "<YOUR CLIENT ID HERE>";
+const CLIENT_SECRET = "<YOUR CLIENT SECRET HERE>";
 const tokenURL= `https://auth.atlassian.com/oauth/token`
 
 app.use(express.static(publicDirectory))
