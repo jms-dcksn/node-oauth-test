@@ -9,7 +9,9 @@
   <%- include('../partials/header'); %>
 </header>
 <script>
-    let client_id = 'OLqCA3fN3St8i1FNGBCB9yzbO4l5JZkp'
+    let client_id = 'YOUR-CLIENT-ID'
+    let scope = 'read%3Ajira-work%20manage%3Ajira-project%20manage%3Ajira-configuration%20read%3Ajira-user%20write%3Ajira-work%20manage%3Ajira-webhook%20manage%3Ajira-data-provider'
+    let redirect_uri = encodeURIComponent('http://localhost:8080/authorize')
 </script>
 
 <main>
@@ -17,12 +19,9 @@
     <h1>Authenticate to Jira Below</h1>
     <p>Clicking this button will open the user consent screen to Jira</p>
     <a href="https://auth.atlassian.com/authorize?response_type=code" class="btn btn-primary"
-        onclick = "location.href = this.href + '&client_id=' + client_id + '&scope=ead%3Ajira-work%20manage%3Ajira-project%20manage%3Ajira-configuration%20read%3Ajira-user%20write%3Ajira-work%20manage%3Ajira-webhook%20manage%3Ajira-data-provider&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fauthorize&state=1234&prompt=consent';return false;">
+        onclick = "location.href = this.href + '&client_id=' + client_id + '&scope=' + scope + '&redirect_uri=' + redirect_uri + '&state=1234&prompt=consent';return false;">
         Authenticate
     </a>
-    <!-- <button id="authenticate" onclick="location.href'https://auth.atlassian.com/authorize?response_type=code&client_id=OLqCA3fN3St8i1FNGBCB9yzbO4l5JZkp&scope=ead%3Ajira-work%20manage%3Ajira-project%20manage%3Ajira-configuration%20read%3Ajira-user%20write%3Ajira-work%20manage%3Ajira-webhook%20manage%3Ajira-data-provider&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fauthorize&state=1234&prompt=consent'">
-        Authenticate
-    </button> -->
   </div>
   <div class="box">
     <pre>
